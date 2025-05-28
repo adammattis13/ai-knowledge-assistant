@@ -1,0 +1,94 @@
+# AI Knowledge Assistant - Startup Instructions
+
+This guide outlines how to boot both local and remote environments for the AI Knowledge Assistant.
+
+---
+
+## 🖥️ Local Environment Setup
+
+### 1. Activate Your Virtual Environment
+source .venv/bin/activate
+
+### 2. Start the FastAPI Backend
+uvicorn app.main:app --reload
+
+# Runs on:
+http://localhost:8000
+
+### 3. In a New Terminal Tab, Start the Streamlit Frontend
+source .venv/bin/activate
+streamlit run ui/app.py
+
+# Runs on:
+http://localhost:8501
+
+---
+
+## ☁️ Remote Environment (Streamlit + Render)
+
+### 1. Ensure Environment Variables Are Set
+
+#### On Render (FastAPI backend)
+Set the following environment variables in your Render service:
+- OPENAI_API_KEY
+- PINECONE_API_KEY
+- PINECONE_ENVIRONMENT
+- PINECONE_INDEX_NAME
+
+#### On Streamlit Cloud
+Go to “Advanced Settings” and set:
+- STREAMLIT_ENV=cloud
+- OPENAI_API_KEY
+- PINECONE_API_KEY
+- PINECONE_ENVIRONMENT
+- PINECONE_INDEX_NAME
+
+### 2. Deploy FastAPI Backend
+Ensure your Render service is running at:
+https://ai-knowledge-backend.onrender.com
+
+### 3. Streamlit Auto-Syncs
+Visit your Streamlit app. It will automatically connect to the backend and update on refresh.
+
+---
+
+## 🧪 Notes
+
+- Supports only `.txt` files.
+- Files are split into 500-character chunks.
+- Embeddings are stored in Pinecone.
+- GPT-4 uses those chunks to answer questions.
+- Do not upload sensitive content. This is a prototype for learning.
+
+---
+
+## 🧼 Useful Commands
+
+### Create a virtual environment (only once)
+python3 -m venv .venv
+
+### Activate environment
+source .venv/bin/activate
+
+### Install dependencies
+pip install -r requirements.txt
+
+### Deactivate environment
+deactivate
+
+---
+
+###Git Synch
+# Make sure you're in the project root
+cd ~/ai-knowledge-assistant
+
+# Stage the new and modified files
+git add .
+
+# Commit with a clear message
+git commit -m "Add startup.txt with local and remote boot instructions"
+
+# Push to remote
+git push origin main
+
+Last updated: May 28, 2025

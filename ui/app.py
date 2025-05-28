@@ -15,7 +15,7 @@ else:
 st.title("🧠 AI Knowledge Assistant")
 
 st.markdown("""
-Welcome to the **AI Knowledge Assistant**, a simple prototype built by [Adam Mattis](https://www.adammattis.com) — strategist, builder, and advocate for doing hard things on purpose.
+Welcome to the **AI Knowledge Assistant**, a simple prototype built by [Adam Mattis](https://www.adammattis.com), a hillbilly by roots, tech exec by trade, doing his best to stay sharp in the ever-evolving world of technology.
 
 This tool is a lightweight demonstration of how enterprise-grade AI architecture can be implemented locally and in the cloud.
 
