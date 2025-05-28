@@ -22,7 +22,8 @@ This tool is a lightweight demonstration of how enterprise-grade AI architecture
 ---
 
 ### 🤖 What This Is
-    This project is a composable, full-stack AI system that uses OpenAI for embeddings and language generation, Pinecone for high-performance vector search, FastAPI for backend services, Streamlit for a real-time use**
+This project is a composable, full-stack AI system that uses OpenAI for embeddings and language generation, Pinecone for high-performance vector search, FastAPI for backend services, Streamlit for a real-time user interface, and GitHub for version control.
+
 ---
 
 ### 🚀 How to Use It
